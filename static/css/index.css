@@ -89,6 +89,10 @@ body {
   /*color: #4286f4;*/
 }
 
+.vertical-center {
+  vertical-align: middle;
+}
+
 .publication-video {
     position: relative;
     width: 100%;

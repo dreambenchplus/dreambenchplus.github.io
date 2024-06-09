@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="DreamBench++: A Human-Aligned Benchmark for Personalized Image Generation">
-  <meta name="keywords" content="DreamBench, DreamBench++, Personalized Image Generation, Personalization, Subject-Driven Generation, Benchmarking">
+  <meta name="keywords" content="DreamBench, DreamBench++, DreamBenchPlus, DreamBench Plus, Personalized Image Generation, Personalization, Subject-Driven Generation, Benchmarking">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DreamBench++: A Human-Aligned Benchmark for Personalized Image Generation</title>
 
@@ -168,8 +168,8 @@
             <!-- Your image here -->
             <img src="static/images/poster.png" width="90%" alt="DreamBench++">
             <h2 class="subtitle has-text-centered">
-              Overview of <span style="font-variant: small-caps;">DreamBench++</span>. We collect diverse images and prompts, and utilize GPT-4o for automated evaluation aligned
-              with human preference.
+              Overview of <span style="font-variant: small-caps;">DreamBench++</span>. We collect diverse images and
+              prompts, and utilize GPT-4o for automated evaluation aligned with human preference.
             </h2>
           </div>
         </div>
@@ -183,16 +183,19 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">Personalized image generation holds great promise in assisting humans in everyday work and life due to its impressive
-          function in creatively generating personalized content.
-          However, current evaluations either are automated but misalign with humans or require human evaluations that are
-          time-consuming and expensive.
-          In this work, we present <span style="font-variant: small-caps;">DreamBench++</span>, a human-aligned benchmark automated by advanced multimodal GPT models.
-          Specifically, we systematically design the prompts to let GPT be both human-aligned and self-aligned, empowered with
-          task reinforcement.
-          Further, we construct a comprehensive dataset comprising diverse images and prompts.
-          By benchmarking 7 modern generative models, we demonstrate that <span style="font-variant: small-caps;">DreamBench++</span> results in significantly more human-aligned
-          evaluation, helping boost the community with innovative findings.
+          <div class="content has-text-justified">Personalized image generation holds great promise in assisting humans
+            in everyday work and life due to its impressive function in creatively generating personalized content.
+            However, current evaluations either are automated but misalign with humans or require human evaluations that
+            are time-consuming and expensive.
+            In this work, we present <span style="font-variant: small-caps;">DreamBench++</span>, a human-aligned
+            benchmark automated by advanced multimodal GPT models.
+            Specifically, we systematically design the prompts to let GPT be both human-aligned and self-aligned,
+            empowered with task reinforcement.
+            Further, we construct a comprehensive dataset comprising diverse images and prompts.
+            By benchmarking 7 modern generative models, we demonstrate that <span
+              style="font-variant: small-caps;">DreamBench++</span>
+            results in significantly more human-aligned evaluation, helping boost the community with innovative
+            findings.
           </div>
         </div>
       </div>
@@ -200,6 +203,263 @@
     </div>
   </section>
 
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered is-fifths-fifths">
+            <h2 class="title is-3">Evaluation Results</h2>
+            <div class="content has-text-justified">
+              <table>
+
+                <thead>
+                  <tr></tr>
+                  <tr>
+                    <th rowspan="2" style="vertical-align: middle;">Method</th>
+                    <th rowspan="2" style="vertical-align: middle;">T2I Model</th>
+                    <th colspan="4" style="text-align: center; font-weight: bold;">Concept Preservation</th>
+                    <th colspan="3" style="text-align: center; font-weight: bold;">Prompt Following</th>
+                  </tr>
+
+                  <tr>
+                    <th>Human</th>
+                    <th>GPT</th>
+                    <th>DINO-I</th>
+                    <th>CLIP-I</th>
+                    <th>Human</th>
+                    <th>GPT</th>
+                    <th>CLIP-T</th>
+                  </tr>
+                </thead>
+
+                <tbody id="tabResults">
+
+                  <tr>
+                    <td>Textual Inversion</td>
+                    <td>SD v1.5</td>
+                    <td>0.316</td>
+                    <td>0.378±0.0012</td>
+                    <td>0.437</td>
+                    <td>0.726</td>
+                    <td>0.604</td>
+                    <td>0.624±0.0033</td>
+                    <td>0.302</td>
+                  </tr>
+
+                  <tr>
+                    <td>DreamBooth</td>
+                    <td>SD v1.5</td>
+                    <td>0.453</td>
+                    <td>0.493±0.0012</td>
+                    <td>0.544</td>
+                    <td>0.753</td>
+                    <td>0.679</td>
+                    <td>0.721±0.0016</td>
+                    <td>0.323</td>
+                  </tr>
+
+                  <tr>
+                    <td>DreamBooth LoRA</td>
+                    <td>SDXL v1.0</td>
+                    <td>0.571</td>
+                    <td>0.597±0.0007</td>
+                    <td>0.628</td>
+                    <td>0.784</td>
+                    <td>0.821</td>
+                    <td>0.865±0.0007</td>
+                    <td>0.341</td>
+                  </tr>
+
+                  <tr>
+                    <td>BLIP-Diffusion</td>
+                    <td>SD v1.5</td>
+                    <td>0.513</td>
+                    <td>0.547±0.0010</td>
+                    <td>0.649</td>
+                    <td>0.823</td>
+                    <td>0.577</td>
+                    <td>0.495±0.0005</td>
+                    <td>0.286</td>
+                  </tr>
+
+                  <tr>
+                    <td>DreamLLM</td>
+                    <td>SDXL v1.0</td>
+                  </tr>
+
+                  <tr>
+                    <td>Emu2</td>
+                    <td>SDXL v1.0</td>
+                    <td>0.410</td>
+                    <td>0.528±0.0016</td>
+                    <td>0.539</td>
+                    <td>0.763</td>
+                    <td>0.641</td>
+                    <td>0.689±0.0010</td>
+                    <td>0.310</td>
+                  </tr>
+
+                  <tr>
+                    <td>IP-Adapter-Plus ViT-H</td>
+                    <td>SDXL v1.0</td>
+                    <td>0.755</td>
+                    <td>0.833±0.0008</td>
+                    <td>0.834</td>
+                    <td>0.917</td>
+                    <td>0.541</td>
+                    <td>0.413±0.0005</td>
+                    <td>0.282</td>
+                  </tr>
+
+                  <tr>
+                    <td>IP-Adapter ViT-G</td>
+                    <td>SDXL v1.0</td>
+                    <td>0.570</td>
+                    <td>0.593±0.0018</td>
+                    <td>0.667</td>
+                    <td>0.855</td>
+                    <td>0.688</td>
+                    <td>0.640±0.0017</td>
+                    <td>0.309</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered is-fifths-fifths">
+            <h2 class="title is-3">Human Alignment Degree</h2>
+            <div class="content has-text-justified">
+              <table>
+
+                <thead>
+                  <tr></tr>
+                  <tr>
+                    <th rowspan="2" style="vertical-align: middle;">Method</th>
+                    <th rowspan="2" style="vertical-align: middle;">T2I Model</th>
+                    <th colspan="4" style="text-align: center; font-weight: bold;">Concept Preservation Kd<sub>Ō</sub></th>
+                    <th colspan="3" style="text-align: center; font-weight: bold;">Prompt Following Kd<sub>Ō</sub></th>
+                  </tr>
+
+                  <tr>
+                    <th>H-H</th>
+                    <th>G-H</th>
+                    <th>D-H</th>
+                    <th>C-H</th>
+                    <th>H-H</th>
+                    <th>G-H</th>
+                    <th>C-H</th>
+                  </tr>
+                </thead>
+
+                <tbody id="tabResults">
+
+                  <tr>
+                    <td>Textual Inversion</td>
+                    <td>SD v1.5</td>
+                    <td>0.685</td>
+                    <td>0.544±0.014</td>
+                    <td>0.262</td>
+                    <td>-0.030</td>
+                    <td>0.475</td>
+                    <td>0.461±0.007</td>
+                    <td>0.267</td>
+                  </tr>
+
+                  <tr>
+                    <td>DreamBooth</td>
+                    <td>SD v1.5</td>
+                    <td>0.647</td>
+                    <td>0.596±0.003</td>
+                    <td>0.408</td>
+                    <td>0.229</td>
+                    <td>0.516</td>
+                    <td>0.506±0.002</td>
+                    <td>0.185</td>
+                  </tr>
+
+                  <tr>
+                    <td>DreamBooth LoRA</td>
+                    <td>SDXL v1.0</td>
+                    <td>0.656</td>
+                    <td>0.641±0.007</td>
+                    <td>0.371</td>
+                    <td>0.321</td>
+                    <td>0.469</td>
+                    <td>0.402±0.001</td>
+                    <td>0.022</td>
+                  </tr>
+
+                  <tr>
+                    <td>BLIP-Diffusion</td>
+                    <td>SD v1.5</td>
+                    <td>0.613</td>
+                    <td>0.362±0.017</td>
+                    <td>-0.078</td>
+                    <td>-0.186</td>
+                    <td>0.619</td>
+                    <td>0.541±0.003</td>
+                    <td>0.319</td>
+                  </tr>
+
+                  <tr>
+                    <td>DreamLLM</td>
+                    <td>SDXL v1.0</td>
+                  </tr>
+
+                  <tr>
+                    <td>Emu2</td>
+                    <td>SDXL v1.0</td>
+                    <td>0.746</td>
+                    <td>0.669±0.005</td>
+                    <td>0.518</td>
+                    <td>0.258</td>
+                    <td>0.441</td>
+                    <td>0.422±0.011</td>
+                    <td>0.230</td>
+                  </tr>
+
+                  <tr>
+                    <td>IP-Adapter-Plus ViT-H</td>
+                    <td>SDXL v1.0</td>
+                    <td>0.602</td>
+                    <td>0.366±0.017</td>
+                    <td>-0.141</td>
+                    <td>-0.150</td>
+                    <td>0.576</td>
+                    <td>0.484±0.006</td>
+                    <td>0.256</td>
+                  </tr>
+
+                  <tr>
+                    <td>IP-Adapter ViT-G</td>
+                    <td>SDXL v1.0</td>
+                    <td>0.591</td>
+                    <td>0.458±0.002</td>
+                    <td>-0.073</td>
+                    <td>-0.212</td>
+                    <td>0.509</td>
+                    <td>0.531±0.006</td>
+                    <td>0.196</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
@@ -220,14 +480,12 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a
-                rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-                Commons Attribution-ShareAlike 4.0 International License</a>.
+              This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed
+              under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
             <p>
-              This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of this
-              website,
-              we just ask that you link back to this page in the footer.
+              This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source code</a>
+              of this website, we just ask that you link back to this page in the footer.
               Please remember to remove the analytics code included in the header of the website which
               you do not want on your website.
             </p>

@@ -134,6 +134,21 @@ body {
   vertical-align: middle;
 }
 
+.button-container {
+  text-align: center;
+}
+
+.conversation-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: cursive;
+  margin: 0 20px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
 .publication-video {
     position: relative;
     width: 100%;

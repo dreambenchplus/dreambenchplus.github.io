@@ -89,6 +89,47 @@ body {
   /*color: #4286f4;*/
 }
 
+.mt-2 {
+  margin-top: .5rem !important;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+.university-logo {
+  height: 60px;
+  margin-right: 10px;
+}
+
+.university-logo:last-child {
+  margin-right: 0;
+}
+
+.footnote {
+  font-family: 'Arial', sans-serif;
+  /* 使用Arial字体 */
+  font-size: 14px;
+  /* 字体大小为14px */
+  white-space: nowrap;
+  /* 确保内容在一行显示 */
+}
+
+.footnote-symbol {
+  font-weight: bold;
+  /* 符号加粗 */
+}
+
 .vertical-center {
   vertical-align: middle;
 }

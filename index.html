@@ -249,58 +249,66 @@
       </div>
     </div>
   </section>
-  <!-- <div class="section">
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+        </div>
+      </div>
+    </div>
+
+    <br>
 
     <div class="button-container">
-      <button class="conversation-button selected" onclick="toggleConversation(1)">Movie</button>
-      <button class="conversation-button" onclick="toggleConversation(2)">Animal</button>
-      <button class="conversation-button" onclick="toggleConversation(3)">Art</button>
-      <button class="conversation-button" onclick="toggleConversation(4)">Society</button>
-      <button class="conversation-button" onclick="toggleConversation(5)">Text</button>
-      <button class="conversation-button" onclick="toggleConversation(6)">Celebrity</button>
-      <button class="conversation-button" onclick="toggleConversation(7)">Imagine</button>
-      <button class="conversation-button" onclick="toggleConversation(8)">Tourism</button>
-      <button class="conversation-button" onclick="toggleConversation(9)">Enbodied AI</button>
+      <button class="image-button selected" onclick="switchGroup('group1')">Test1</button>
+      <button class="image-button" onclick="switchGroup('group2')">Test2</button>
+    </div>
+
+    <div id="group1" class="image-container active">
+      <img src="static/images/data_dist.png" alt="Image 1">
+      <img src="static/images/megvii_logo.png" alt="Image 2">
+    </div>
+
+    <div id="group2" class="image-container">
+      <img src="static/images/poster.png" alt="Image 3">
+      <img src="static/images/xjtu_logo.png" alt="Image 4">
     </div>
 
     <script>
-      const conversationButtons = document.querySelectorAll('.conversation-button');
-      const conversationContainers = document.querySelectorAll('.chat-messages');
+      function switchGroup(groupId) {
+        var imageContainers = document.querySelectorAll('.image-container');
+        var buttons = document.querySelectorAll('.image-button');
 
-      let currentConversationIndex = 0;
+        buttons.forEach(function (button) {
+          if (button.getAttribute('onclick').includes(groupId)) {
+            button.classList.add('selected');
+          } else {
+            button.classList.remove('selected');
+          }
+        });
 
-      function initialize() {
-        for (let i = 1; i < conversationContainers.length; i++) {
-          conversationContainers[i].style.opacity = '0';
-          conversationContainers[i].style.display = 'none';
+        var activeContainer = document.querySelector('.image-container.active');
+
+        if (activeContainer) {
+          activeContainer.classList.remove('active');
+          setTimeout(function () {
+            showNewActiveContainer(groupId);
+          }, 500);
+        } else {
+          showNewActiveContainer(groupId);
         }
-
-        conversationButtons[currentConversationIndex].classList.add('selected');
       }
 
-      window.addEventListener('load', initialize);
-
-      function toggleConversation(index) {
-        conversationContainers[currentConversationIndex].style.opacity = '0';
-        conversationButtons[currentConversationIndex].classList.remove('selected');
-
-        conversationContainers[currentConversationIndex].addEventListener('transitionend', function transitionEndCallback() {
-          conversationContainers[currentConversationIndex].removeEventListener('transitionend', transitionEndCallback);
-
-          conversationContainers[currentConversationIndex].style.display = 'none';
-
-          currentConversationIndex = index - 1;
-          conversationContainers[currentConversationIndex].style.display = 'block';
-
-          setTimeout(() => {
-            conversationContainers[currentConversationIndex].style.opacity = '1';
-            conversationButtons[currentConversationIndex].classList.add('selected');
-          }, 0);
-        });
+      function showNewActiveContainer(groupId) {
+        var selectedGroup = document.getElementById(groupId);
+        selectedGroup.classList.add('active');
+        document.querySelector('.image-button[onclick="switchGroup(\'' + groupId + '\')"]').classList.add('selected');
       }
     </script>
-
-  </div> -->
+    <br><br><br><br><br><br>
+  </section>
 
   <section class="hero">
     <div class="hero-body">

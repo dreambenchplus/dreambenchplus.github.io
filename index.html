@@ -251,7 +251,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
+          <h2 class="title is-3">Quality Result</h2>
         </div>
       </div>
     </div>
@@ -263,9 +263,52 @@
       <button class="image-button" onclick="switchGroup('group2')">DreamBooth SD v1.5</button>
       <button class="image-button" onclick="switchGroup('group3')">DreamBooth LoRA SDXL v1.0</button>
       <button class="image-button" onclick="switchGroup('group4')">BLIP Diffusion SD v1.5</button>
+    </div>
+    <div class="button-container">
       <button class="image-button" onclick="switchGroup('group5')">Emu2 SDXL v1.0</button>
       <button class="image-button" onclick="switchGroup('group6')">IP-Adapter-Plus ViT-H SDXL v1.0</button>
       <button class="image-button" onclick="switchGroup('group7')">IP-Adapter ViT-G v1.0</button>
+    </div>
+
+    <br>
+
+    <div class="reference-image-container">
+      <div class="reference-item">
+        <p class="reference-caption">A photograph of a heron in mid-flight over a misty river</p>
+        <img src="static/images/samples/ref_images/0_heron.jpg" alt="Image 0">
+      </div>
+      <div class="reference-item">
+        <p class="reference-caption">A cartoon style illustration of a corgi dressed as a superhero</p>
+        <img src="static/images/samples/ref_images/1_corgi.jpg" alt="Image 1">
+      </div>
+      <div class="reference-item">
+        <p class="reference-caption">A photograph of a man playing violin in a dimly lit room</p>
+        <img src="static/images/samples/ref_images/2_man.jpg" alt="Image 2">
+      </div>
+      <div class="reference-item">
+        <p class="reference-caption">A photo of a girl playing with a puppy on a grassy field</p>
+        <img src="static/images/samples/ref_images/3_girl.jpg" alt="Image 3">
+      </div>
+      <div class="reference-item">
+        <p class="reference-caption">A watercolor painting of a teddy bear dressed as a knight, guarding a castle</p>
+        <img src="static/images/samples/ref_images/4_bear.jpg" alt="Image 4">
+      </div>
+      <div class="reference-item">
+        <p class="reference-caption">A photograph of a guitar hanging on a brick wall adorned with vintage posters</p>
+        <img src="static/images/samples/ref_images/5_guitar.jpg" alt="Image 5">
+      </div>
+      <div class="reference-item">
+        <p class="reference-caption">A detailed photograph of a teapot in a sunlit garden, flowers blooming around</p>
+        <img src="static/images/samples/ref_images/6_teapot.jpg" alt="Image 6">
+      </div>
+      <div class="reference-item">
+        <p class="reference-caption">A serene riverside scene with fishermen in boats, painted in watercolor sketch</p>
+        <img src="static/images/samples/ref_images/7_sketch.jpg" alt="Image 7">
+      </div>
+      <div class="reference-item">
+        <p class="reference-caption">A digital illustration of a cat, composed of low-poly geometric patterns</p>
+        <img src="static/images/samples/ref_images/8_geometric.jpg" alt="Image 8">
+      </div>
     </div>
 
     <div id="group1" class="image-container active">
@@ -371,7 +414,7 @@
           activeContainer.classList.remove('active');
           setTimeout(function () {
             showNewActiveContainer(groupId);
-          }, 500);
+          }, 200);
         } else {
           showNewActiveContainer(groupId);
         }
@@ -647,12 +690,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{park2021nerfies,
+      <!-- <pre><code>@article{park2021nerfies,
   author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
   title     = {Nerfies: Deformable Neural Radiance Fields},
   journal   = {ICCV},
   year      = {2021},
-}</code></pre>
+}</code></pre> -->
     </div>
   </section>
 

@@ -108,9 +108,6 @@
             <div class="is-size-5 publication-authors">
               <p class="footnote">
                 <span class="footnote-symbol">*</span>Equal contribution.
-                <span class="footnote-symbol">†</span>Internship at MEGVII Technology.
-                <span class="footnote-symbol">‡</span>Project leader.
-                <span class="footnote-symbol">¶</span>Corresponding authors.
               </p>
             </div>
 
@@ -262,18 +259,97 @@
     <br>
 
     <div class="button-container">
-      <button class="image-button selected" onclick="switchGroup('group1')">Test1</button>
-      <button class="image-button" onclick="switchGroup('group2')">Test2</button>
+      <button class="image-button selected" onclick="switchGroup('group1')">Textual Inversion SD v1.5</button>
+      <button class="image-button" onclick="switchGroup('group2')">DreamBooth SD v1.5</button>
+      <button class="image-button" onclick="switchGroup('group3')">DreamBooth LoRA SDXL v1.0</button>
+      <button class="image-button" onclick="switchGroup('group4')">BLIP Diffusion SD v1.5</button>
+      <button class="image-button" onclick="switchGroup('group5')">Emu2 SDXL v1.0</button>
+      <button class="image-button" onclick="switchGroup('group6')">IP-Adapter-Plus ViT-H SDXL v1.0</button>
+      <button class="image-button" onclick="switchGroup('group7')">IP-Adapter ViT-G v1.0</button>
     </div>
 
     <div id="group1" class="image-container active">
-      <img src="static/images/data_dist.png" alt="Image 1">
-      <img src="static/images/megvii_logo.png" alt="Image 2">
+      <img src="static/images/samples/textual_inversion_sd/0_heron.jpg" alt="Image 0">
+      <img src="static/images/samples/textual_inversion_sd/1_corgi.jpg" alt="Image 1">
+      <img src="static/images/samples/textual_inversion_sd/2_man.jpg" alt="Image 2">
+      <img src="static/images/samples/textual_inversion_sd/3_girl.jpg" alt="Image 3">
+      <img src="static/images/samples/textual_inversion_sd/4_bear.jpg" alt="Image 4">
+      <img src="static/images/samples/textual_inversion_sd/5_guitar.jpg" alt="Image 5">
+      <img src="static/images/samples/textual_inversion_sd/6_teapot.jpg" alt="Image 6">
+      <img src="static/images/samples/textual_inversion_sd/7_sketch.jpg" alt="Image 7">
+      <img src="static/images/samples/textual_inversion_sd/8_geometric.jpg" alt="Image 8">
     </div>
 
     <div id="group2" class="image-container">
-      <img src="static/images/poster.png" alt="Image 3">
-      <img src="static/images/xjtu_logo.png" alt="Image 4">
+      <img src="static/images/samples/dreambooth_sd/0_heron.jpg" alt="Image 0">
+      <img src="static/images/samples/dreambooth_sd/1_corgi.jpg" alt="Image 1">
+      <img src="static/images/samples/dreambooth_sd/2_man.jpg" alt="Image 2">
+      <img src="static/images/samples/dreambooth_sd/3_girl.jpg" alt="Image 3">
+      <img src="static/images/samples/dreambooth_sd/4_bear.jpg" alt="Image 4">
+      <img src="static/images/samples/dreambooth_sd/5_guitar.jpg" alt="Image 5">
+      <img src="static/images/samples/dreambooth_sd/6_teapot.jpg" alt="Image 6">
+      <img src="static/images/samples/dreambooth_sd/7_sketch.jpg" alt="Image 7">
+      <img src="static/images/samples/dreambooth_sd/8_geometric.jpg" alt="Image 8">
+    </div>
+
+    <div id="group3" class="image-container">
+      <img src="static/images/samples/dreambooth_lora_sdxl/0_heron.jpg" alt="Image 0">
+      <img src="static/images/samples/dreambooth_lora_sdxl/1_corgi.jpg" alt="Image 1">
+      <img src="static/images/samples/dreambooth_lora_sdxl/2_man.jpg" alt="Image 2">
+      <img src="static/images/samples/dreambooth_lora_sdxl/3_girl.jpg" alt="Image 3">
+      <img src="static/images/samples/dreambooth_lora_sdxl/4_bear.jpg" alt="Image 4">
+      <img src="static/images/samples/dreambooth_lora_sdxl/5_guitar.jpg" alt="Image 5">
+      <img src="static/images/samples/dreambooth_lora_sdxl/6_teapot.jpg" alt="Image 6">
+      <img src="static/images/samples/dreambooth_lora_sdxl/7_sketch.jpg" alt="Image 7">
+      <img src="static/images/samples/dreambooth_lora_sdxl/8_geometric.jpg" alt="Image 8">
+    </div>
+
+    <div id="group4" class="image-container">
+      <img src="static/images/samples/blip_diffusion/0_heron.jpg" alt="Image 0">
+      <img src="static/images/samples/blip_diffusion/1_corgi.jpg" alt="Image 1">
+      <img src="static/images/samples/blip_diffusion/2_man.jpg" alt="Image 2">
+      <img src="static/images/samples/blip_diffusion/3_girl.jpg" alt="Image 3">
+      <img src="static/images/samples/blip_diffusion/4_bear.jpg" alt="Image 4">
+      <img src="static/images/samples/blip_diffusion/5_guitar.jpg" alt="Image 5">
+      <img src="static/images/samples/blip_diffusion/6_teapot.jpg" alt="Image 6">
+      <img src="static/images/samples/blip_diffusion/7_sketch.jpg" alt="Image 7">
+      <img src="static/images/samples/blip_diffusion/8_geometric.jpg" alt="Image 8">
+    </div>
+
+    <div id="group5" class="image-container">
+      <img src="static/images/samples/emu2/0_heron.jpg" alt="Image 0">
+      <img src="static/images/samples/emu2/1_corgi.jpg" alt="Image 1">
+      <img src="static/images/samples/emu2/2_man.jpg" alt="Image 2">
+      <img src="static/images/samples/emu2/3_girl.jpg" alt="Image 3">
+      <img src="static/images/samples/emu2/4_bear.jpg" alt="Image 4">
+      <img src="static/images/samples/emu2/5_guitar.jpg" alt="Image 5">
+      <img src="static/images/samples/emu2/6_teapot.jpg" alt="Image 6">
+      <img src="static/images/samples/emu2/7_sketch.jpg" alt="Image 7">
+      <img src="static/images/samples/emu2/8_geometric.jpg" alt="Image 8">
+    </div>
+
+    <div id="group6" class="image-container">
+      <img src="static/images/samples/ip_adapter_plus_vit_h_sdxl/0_heron.jpg" alt="Image 0">
+      <img src="static/images/samples/ip_adapter_plus_vit_h_sdxl/1_corgi.jpg" alt="Image 1">
+      <img src="static/images/samples/ip_adapter_plus_vit_h_sdxl/2_man.jpg" alt="Image 2">
+      <img src="static/images/samples/ip_adapter_plus_vit_h_sdxl/3_girl.jpg" alt="Image 3">
+      <img src="static/images/samples/ip_adapter_plus_vit_h_sdxl/4_bear.jpg" alt="Image 4">
+      <img src="static/images/samples/ip_adapter_plus_vit_h_sdxl/5_guitar.jpg" alt="Image 5">
+      <img src="static/images/samples/ip_adapter_plus_vit_h_sdxl/6_teapot.jpg" alt="Image 6">
+      <img src="static/images/samples/ip_adapter_plus_vit_h_sdxl/7_sketch.jpg" alt="Image 7">
+      <img src="static/images/samples/ip_adapter_plus_vit_h_sdxl/8_geometric.jpg" alt="Image 8">
+    </div>
+
+    <div id="group7" class="image-container">
+      <img src="static/images/samples/ip_adapter_vit_g_sdxl/0_heron.jpg" alt="Image 0">
+      <img src="static/images/samples/ip_adapter_vit_g_sdxl/1_corgi.jpg" alt="Image 1">
+      <img src="static/images/samples/ip_adapter_vit_g_sdxl/2_man.jpg" alt="Image 2">
+      <img src="static/images/samples/ip_adapter_vit_g_sdxl/3_girl.jpg" alt="Image 3">
+      <img src="static/images/samples/ip_adapter_vit_g_sdxl/4_bear.jpg" alt="Image 4">
+      <img src="static/images/samples/ip_adapter_vit_g_sdxl/5_guitar.jpg" alt="Image 5">
+      <img src="static/images/samples/ip_adapter_vit_g_sdxl/6_teapot.jpg" alt="Image 6">
+      <img src="static/images/samples/ip_adapter_vit_g_sdxl/7_sketch.jpg" alt="Image 7">
+      <img src="static/images/samples/ip_adapter_vit_g_sdxl/8_geometric.jpg" alt="Image 8">
     </div>
 
     <script>

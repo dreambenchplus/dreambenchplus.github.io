@@ -139,6 +139,11 @@ body {
 }
 
 .reference-image-container {
+  position: absolute;
+  top: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1500px;
   display: flex;
   justify-content: center;
   align-items: center;

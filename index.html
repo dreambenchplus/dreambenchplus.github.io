@@ -142,36 +142,17 @@
 
             <div class="column has-text-centered">
               <div class="publication-links">
-                <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2011.12948" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Paper</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2011.12948" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://dreambenchplus.github.io" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
                     <span>arXiv</span>
                   </a>
                 </span>
-                <!-- Video Link. -->
-                <span class="link-block">
-                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                    </span>
-                    <span>Video</span>
-                  </a>
-                </span>
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/google/nerfies" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/yuangpeng/dreambench_plus" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -180,13 +161,22 @@
                 </span>
                 <!-- Dataset Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                  <a href="https://drive.google.com/drive/folders/179irXpqLOxy1CFxZgC_NPXM-vjawxxYy?usp=sharing"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <i class="far fa-images"></i>
+                      <!-- <i class="far fa-images"></i> -->
+                      <p style="font-size:18px">📊</p>
                     </span>
                     <span>Data</span>
                   </a>
+                  <span class="link-block">
+                    <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <p style="font-size:18px">🏆</p>
+                      </span>
+                      <span>Leaderboard</span>
+                    </a>
+                  </span>
               </div>
 
             </div>
@@ -263,6 +253,154 @@
               summary and planning.
               Finally, all prompts and reasoning outputs are joined with image samples for score outputs.
             </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered is-fifths-fifths">
+            <h2 class="title is-3">Leaderboard</h2>
+            <div class="content has-text-justified">
+              <table>
+
+                <thead>
+                  <tr></tr>
+                  <tr>
+                    <th rowspan="2" style="vertical-align: middle;">Method</th>
+                    <th rowspan="2" style="vertical-align: middle;">T2I Model</th>
+                    <th colspan="5" style="text-align: center; font-weight: bold;">Concept Preservation</th>
+                    <th colspan="4" style="text-align: center; font-weight: bold;">Prompt Following</th>
+                    <th rowspan="2" style="vertical-align: middle;">CP·PF</th>
+                  </tr>
+
+                  <tr>
+                    <th>Animal</th>
+                    <th>Human</th>
+                    <th>Object</th>
+                    <th>Style</th>
+                    <th>Overall</th>
+                    <th>Photorealistic</th>
+                    <th>Style</th>
+                    <th>Imaginative</th>
+                    <th>Overall</th>
+                  </tr>
+                </thead>
+
+                <tbody id="tabResults">
+
+                  <tr>
+                    <td>DreamBooth LoRA</td>
+                    <td>SDXL v1.0</td>
+                    <td>0.751</td>
+                    <td>0.311</td>
+                    <td>0.543</td>
+                    <td>0.718</td>
+                    <td>0.598</td>
+                    <td>0.898</td>
+                    <td>0.895</td>
+                    <td>0.754</td>
+                    <td>0.865</td>
+                    <td>0.517</td>
+                  </tr>
+
+                  <tr>
+                    <td>IP-Adapter ViT-G</td>
+                    <td>SDXL v1.0</td>
+                    <td>0.667</td>
+                    <td>0.558</td>
+                    <td>0.504</td>
+                    <td>0.752</td>
+                    <td>0.593</td>
+                    <td>0.743</td>
+                    <td>0.632</td>
+                    <td>0.446</td>
+                    <td>0.640</td>
+                    <td>0.380</td>
+                  </tr>
+
+                  <tr>
+                    <td>Emu2</td>
+                    <td>SDXL v1.0</td>
+                    <td>0.670</td>
+                    <td>0.546</td>
+                    <td>0.447</td>
+                    <td>0.454</td>
+                    <td>0.528</td>
+                    <td>0.732</td>
+                    <td>0.719</td>
+                    <td>0.560</td>
+                    <td>0.690</td>
+                    <td>0.364</td>
+                  </tr>
+
+                  <tr>
+                    <td>DreamBooth</td>
+                    <td>SD v1.5</td>
+                    <td>0.640</td>
+                    <td>0.199</td>
+                    <td>0.488</td>
+                    <td>0.476</td>
+                    <td>0.494</td>
+                    <td>0.789</td>
+                    <td>0.775</td>
+                    <td>0.504</td>
+                    <td>0.721</td>
+                    <td>0.356</td>
+                  </tr>
+
+                  <tr>
+                    <td>IP-Adapter-Plus ViT-H</td>
+                    <td>SDXL v1.0</td>
+                    <td>0.900</td>
+                    <td>0.845</td>
+                    <td>0.759</td>
+                    <td>0.912</td>
+                    <td>0.833</td>
+                    <td>0.502</td>
+                    <td>0.384</td>
+                    <td>0.279</td>
+                    <td>0.413</td>
+                    <td>0.344</td>
+                  </tr>
+
+                  <tr>
+                    <td>BLIP-Diffusion</td>
+                    <td>SD v1.5</td>
+                    <td>0.673</td>
+                    <td>0.557</td>
+                    <td>0.469</td>
+                    <td>0.507</td>
+                    <td>0.547</td>
+                    <td>0.581</td>
+                    <td>0.510</td>
+                    <td>0.303</td>
+                    <td>0.495</td>
+                    <td>0.271</td>
+                  </tr>
+
+                  <tr>
+                    <td>Textual Inversion</td>
+                    <td>SD v1.5</td>
+                    <td>0.502</td>
+                    <td>0.358</td>
+                    <td>0.305</td>
+                    <td>0.358</td>
+                    <td>0.378</td>
+                    <td>0.671</td>
+                    <td>0.686</td>
+                    <td>0.437</td>
+                    <td>0.624</td>
+                    <td>0.236</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -531,11 +669,6 @@
                   </tr>
 
                   <tr>
-                    <td>DreamLLM</td>
-                    <td>SDXL v1.0</td>
-                  </tr>
-
-                  <tr>
                     <td>Emu2</td>
                     <td>SDXL v1.0</td>
                     <td>0.410</td>
@@ -657,11 +790,6 @@
                     <td>0.619</td>
                     <td>0.541±0.003</td>
                     <td>0.319</td>
-                  </tr>
-
-                  <tr>
-                    <td>DreamLLM</td>
-                    <td>SDXL v1.0</td>
                   </tr>
 
                   <tr>
